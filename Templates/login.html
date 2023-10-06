@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login page</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+        <script src="https://kit.fontawesome.com/a68eb1e7be.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="bgcontainer">
+            <div class="form-box">
+                <h1 id="title">Sign Up</h1>
+                {{msg_w}}
+                {{msg_r}}
+                {{msg}}
+                <form action="\SignUp" method = "post">
+                    <div class="input-group">
+                        <div class="input-field" >
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id= "user" placeholder="Username" name="user">
+                        </div>
+                        <div class="input-field" >
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="nameField" placeholder="Email" name="nameField">
+                        </div>
+                        <div class="input-field" >
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" id= "pwd" placeholder="Password" name="pwd">
+                        </div>
+                    </div>
+                    <div class="btn-field">
+                        <button type="submit" id="signupBtn">Sign Up</button>
+                        <button type="button" id="signinBtn" class="disable"><a href="/signin">Sign In</button>
+                    </div>
+                </form>
+    
+        
+    </body>
+</html>
