@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: presizo
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: presizo
+  template:
+    metadata:
+      labels:
+        app: presizo
+    spec:
+      containers:
+      - name: mycluster
+        image: us.icr.io/presizo/application
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
+
