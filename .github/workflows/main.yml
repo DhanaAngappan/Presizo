@@ -1,0 +1,13 @@
+name: sample
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  empty-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Placeholder Step
+        run: echo "This is a placeholder step with no operations"
